@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'org.automationProyect'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 17
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.seleniumhq.selenium:selenium-java:3.141.59'
+    implementation 'io.cucumber:cucumber-java:4.2.0'
+    testImplementation 'io.cucumber:cucumber-junit:4.2.0'
+    testImplementation 'junit:junit:4.12'
+}
+
+test {
+    systemProperty("cucumber.options", System.getProperty("cucumber.options"))
+}
